@@ -75,7 +75,6 @@ app.get('/watchlist/delete', (req, res) => {
 
 // /watchlist/delete-watched
 app.get('/watchlist/delete-watched', (req, res) => {
-  console.log(watchList);
   let result = watchList.filter((videoObj) => isWatched(videoObj));
   return res.json(result);
 });
